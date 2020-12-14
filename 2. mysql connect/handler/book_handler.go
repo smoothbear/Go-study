@@ -3,14 +3,23 @@ package handler
 import (
 	"encoding/json"
 	"net/http"
+	"restful/mysql/model"
 	"restful/mysql/payload/request"
 )
 
 func CreateBook(w http.ResponseWriter, r *http.Request) {
-	var bookRequest request.Book
 	decoder := json.NewDecoder(r.Body)
-	if err := decoder.Decode(&bookRequest); err != nil {
-		w.WriteHeader(http.StatusCreated)
-		_, _ = w.Write([]byte(""))
+	var bookRequest request.Book
+	err := decoder.Decode(&bookRequest)
+	if err != nil {
+		panic(err)
 	}
+
+	book := model.Book{Title: bookRequest.Title, Description: bookRequest.Description}
+	result :=
+
+}
+
+func DeleteBook(w http.ResponseWriter, r *http.Request){
+
 }
