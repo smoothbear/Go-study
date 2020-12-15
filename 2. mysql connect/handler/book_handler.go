@@ -16,7 +16,7 @@ func CreateBook(w http.ResponseWriter, r *http.Request) {
 	}
 
 	book := model.Book{Title: bookRequest.Title, Description: bookRequest.Description}
-	result :=
+	result := db.
 
 }
 
