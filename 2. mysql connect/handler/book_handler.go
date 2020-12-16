@@ -3,6 +3,7 @@ package handler
 import (
 	"encoding/json"
 	"net/http"
+	"restful/mysql/db"
 	"restful/mysql/model"
 	"restful/mysql/payload/request"
 )
@@ -16,7 +17,7 @@ func CreateBook(w http.ResponseWriter, r *http.Request) {
 	}
 
 	book := model.Book{Title: bookRequest.Title, Description: bookRequest.Description}
-	result := db.
+	result := D
 
 }
 
