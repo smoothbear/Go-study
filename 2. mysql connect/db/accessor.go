@@ -11,8 +11,9 @@ type Accessor interface {
 	CreateBook(book *model.Book)
 
 	// Get Method
-	GetUser(userId string)
+	GetUser(userId string)(user model.User)
 	GetBook(UUID string)
+	GetBookList()
 
 	// Delete Method
 	DeleteUser(userId string) error
